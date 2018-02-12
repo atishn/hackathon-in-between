@@ -1,0 +1,5 @@
+handlers:
+
+- url: /api/v1(/.*)?
+  script: v1api.routes.app
+  secure: always

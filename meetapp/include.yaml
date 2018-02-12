@@ -1,0 +1,13 @@
+handlers:
+
+- url: /
+  script: meetapp.routes.app
+  secure: always
+
+- url: /oauth2callback
+  script: meetapp.routes.app
+  secure: always
+
+- url: /room(/.*)?
+  script: meetapp.routes.app
+  secure: always

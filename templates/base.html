@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Meetup</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+  <main>
+    {% block main %}{% endblock %}
+  </main>
+  {% block scripts %}
+  <script src="/static/_assets/js/build/app.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzdJug9qiXpGG2Z3iVsYx9pjX75P2k9xI&libraries=places&callback=Room.init" async defer></script>
+  {% endblock %}
+</body>
+</html>

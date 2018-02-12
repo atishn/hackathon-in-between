@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div class="home">
+  <h2>Let’s get together!</h2>
+  <form class="home__form" method="POST" action="/api/v1/create-event" target="submit__frame">
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="text" id="title" name="title">
+      <label class="mdl-textfield__label" for="title">Event title</label>
+    </div>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="number" id="count" name="count">
+      <label class="mdl-textfield__label" for="count">Number of Guests</label>
+    </div>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="text" id="address" name="address">
+      <label class="mdl-textfield__label" for="address">Enter your address</label>
+    </div>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="date" id="event_date" name="event_date">
+      <label class="mdl-textfield__label" for="event_date">Event date</label>
+    </div>
+    <ul class="check-list interests">
+      <li>
+        <h4>What are you in the mood for?</h4>
+      </li>
+      <li>
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox_dinner">
+          <input type="checkbox" id="checkbox_dinner" class="mdl-checkbox__input">
+          <span class="mdl-checkbox__label">Dinner</span>
+        </label>
+      </li>
+      <li>
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox_drinks">
+          <input type="checkbox" id="checkbox_drinks" class="mdl-checkbox__input">
+          <span class="mdl-checkbox__label">Drinks</span>
+        </label>
+      </li>
+      <li>
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox_movie">
+          <input type="checkbox" id="checkbox_movie" class="mdl-checkbox__input">
+          <span class="mdl-checkbox__label">Movie</span>
+        </label>
+      </li>
+      <li>
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox_coffee">
+          <input type="checkbox" id="checkbox_coffee" class="mdl-checkbox__input">
+          <span class="mdl-checkbox__label">Coffee</span>
+        </label>
+      </li>
+    </ul>
+    <input type="hidden" id="interests" name="interests" />
+    <input type="hidden" id="moods" name="moods" value="whatever" />
+    <div class="btn-wrap">
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect home__submit" type="submit">Let’s Go</button>
+    </div>
+  </form>
+  <iframe class="submit-frame" id="submit__frame" name="submit__frame"></iframe>
+</div>
+{% endblock %}
+{% block scripts %}
+{{ super() }}
+<script>
+  window.onload = window.Home.init;
+</script>
+{% endblock %}

@@ -1,0 +1,8 @@
+# App Engine Taskqueue config
+# See https://cloud.google.com/appengine/docs/python/config/queueref
+queue:
+- name: default
+  rate: 5/s
+  bucket_size: 5
+  max_concurrent_requests: 6  # AppEngine only allows 12 connections per instance but 8 will be used by CMS
+  

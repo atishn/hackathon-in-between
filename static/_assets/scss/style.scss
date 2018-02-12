@@ -1,0 +1,15 @@
+/* Style.scss */
+@import 'partials/room.scss';
+
+
+html,
+body {
+  margin: 0;
+}
+
+main {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+@import 'home';

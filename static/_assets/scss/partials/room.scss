@@ -1,0 +1,52 @@
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.user--not-added {
+  background: #e4e4e4;
+}
+
+.user__img {
+  background: grey;
+  border-radius: 100%;
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+}
+
+.user__name {
+  display: inline-block;
+  padding-left: 20px;
+}
+
+.mdl-data-table {
+  width: 100%;
+}
+
+.mdl-data-table td {
+  text-align: left;
+}
+
+#map {
+  height: 300px;
+  width: 100%;
+}
+
+.mdl-card--expand {
+  background: none 50% 50% / cover no-repeat;
+  color: white;
+  padding-top: 45%;
+  text-shadow: 0 0 3px black;
+}
+
+.demo-card-container {
+  padding: 40px 0;
+}
+
+.mdl-card {
+  float: left;
+  margin-bottom: 30px;
+  margin-right: 20px;
+  width: calc(33.33% - 20px);
+}

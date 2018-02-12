@@ -1,0 +1,44 @@
+runtime: python27
+api_version: 1
+threadsafe: yes
+#service: default
+
+## add and remove apps here
+includes:
+  - v1api/include.yaml
+  - meetapp/include.yaml
+
+handlers:
+
+- url: /static
+  static_dir: static/
+  application_readable: true
+  secure: always
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
+- name: pycrypto
+  version: latest
+- name: ssl
+  version: latest
+
+skip_files:
+#File Types
+- ^(.*/)?#.*#
+- ^(.*/)?.*~
+- ^(.*/)?.*\.csv
+- ^(.*/)?.*\.p12
+- ^(.*/)?.*\.pem
+- ^(.*/)?.*\.py[co]
+- ^(.*/)?.*\.scss
+- ^(.*/)?.*\.sql
+- ^(.*/)?.*\.soy
+- ^(.*/)?.*\.log
+- ^(.*/)?.*/RCS/.*
+- ^(.*/)?\..*
+- ^(.*/)?\.DS_Store
+- ^(.*/)?\.coveragerc
+- ^(.*/)?\.stylelintrc
